@@ -32,4 +32,4 @@ jobs:
       - name: Run Jest tests
         run: |
           yarn upgrade
-          yarn test:ci
+          yarn test
