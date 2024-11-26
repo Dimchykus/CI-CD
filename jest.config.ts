@@ -194,4 +194,12 @@ const config: Config = {
   // watchman: true,
 };
 
-export default config;
+import nextJest from "next/jest";
+
+/** @type {import('jest').Config} */
+const createJestConfig = nextJest({
+  // Provide the path to your Next.js app to load next.config.js and .env files in your test environment
+  dir: "./",
+});
+
+export default createJestConfig(config);
