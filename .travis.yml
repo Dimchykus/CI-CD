@@ -12,10 +12,10 @@ cache:
     - node_modules
 
 install:
-  - npm install
+  - yarn install
 
 script:
-  - npm run build # Build the Next.js app for production
+  - yarn run build # Build the Next.js app for production
 
 deploy:
   provider: heroku
