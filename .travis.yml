@@ -1,10 +1,26 @@
+language: node_js
+node_js:
+  - "16" # Use a modern Node.js version supported by Next.js
 sudo: false
 
-language: node_js
+branches:
+  only:
+    - main # Adjust to 'master' if your branch is named 'master'
 
-node_js:
-  - node
+cache:
+  directories:
+    - node_modules
+
+install:
+  - npm install
 
 script:
-  - yarn build
-  - yarn test
+  - npm run build # Build the Next.js app for production
+
+deploy:
+  provider: heroku
+  skip_cleanup: true
+  keep-history: true
+  api_key:
+    secure: HRKU-5e8c9bcc-f94a-4391-bdb7-8e28741270b4 # Replace with your Heroku API key (encrypted with Travis CLI)
+  app: ci-cd # Replace with your Heroku app name
