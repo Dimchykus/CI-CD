@@ -1,7 +1,7 @@
 language: node_js
 node_js:
   - "19.0.0" # Use a modern Node.js version supported by Next.js
-sudo: false
+sudo: true
 
 branches:
   only:
@@ -10,6 +10,10 @@ branches:
 cache:
   directories:
     - node_modules
+
+before_install:
+  - npm install -g npm@latest # Update npm to the latest version
+  - npm config set progress false # Disable npm progress bar to avoid issues in CI
 
 install:
   - yarn install
