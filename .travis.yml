@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - "16" # Use a modern Node.js version supported by Next.js
+  - "21" # Use a modern Node.js version supported by Next.js
 sudo: false
 
 branches:
