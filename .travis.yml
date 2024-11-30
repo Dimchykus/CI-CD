@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - "19.0.0-rc-66855b96-20241106" # Use a modern Node.js version supported by Next.js
+  - "19.0.0" # Use a modern Node.js version supported by Next.js
 sudo: false
 
 branches:
